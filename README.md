@@ -1,5 +1,10 @@
 # glo2lyx
 Replace glossary keywords in LyX text with nomenclature commands.
+## Installation
+```
+pip install https://github.com/ykgmfq/glo2lyx/archive/refs/tags/v1.zip
+```
+
 ## Usage
 An example glossary looks like this:
 ```tex
