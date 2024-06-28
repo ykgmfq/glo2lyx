@@ -1,0 +1,12 @@
+[project]
+name = "glo2lyx"
+version = "1"
+authors = [
+    {name = "Dennis M. Pöpperl", email = "dennis.poepperl@iem.thm.de"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+description = "Replace glossary keywords in LyX text with nomenclature commands."
+
+[project.scripts]
+glo2lyx="glo2lyx:main"
