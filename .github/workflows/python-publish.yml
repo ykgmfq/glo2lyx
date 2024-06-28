@@ -1,0 +1,18 @@
+name: Release
+on:
+  pull_request:
+  push:
+  release:
+    types: [published]
+permissions:
+  contents: read
+jobs:
+  build_sdist_and_wheel:
+    name: Build source distribution and pure-Python wheel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: build
+        uses: OpenAstronomy/build-python-dist@main
+        with:
+          pure_python_wheel: true
