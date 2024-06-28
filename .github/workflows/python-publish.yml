@@ -1,0 +1,20 @@
+name: Release
+on:
+  push:
+permissions:
+  contents: read
+jobs:
+  build_sdist_and_wheel:
+    name: Build source distribution and pure-Python wheel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: build
+        uses: OpenAstronomy/build-python-dist@main
+        with:
+          pure_python_wheel: true
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Wheel
+          path: dist/*.whl
